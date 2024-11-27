@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { Pokemon } from "../../api/pokemons/types";
 import Modal from "../molecules/Modal";
 import Button from "../atoms/Button";
+import { usePokeball } from "../../context/PokeballContext";
 
 
 export default function PokemonPage() {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState<Pokemon>();
   const [modalOpen, setModalOpen] = useState(false);
+  const { dispatch } = usePokeball();
 
   useEffect(() => {
     if (id) {
@@ -23,6 +25,12 @@ export default function PokemonPage() {
 
   const handleClick = () => {
     setModalOpen(true);
+  };
+
+  const handleGetPokemon = () => {
+    if (pokemon) {
+      dispatch({type: "add", pokemon})
+    };
   };
 
   return (
@@ -77,6 +85,12 @@ export default function PokemonPage() {
               <dt className="text-sm/6 font-medium text-gray-900">Attacks</dt>
               <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
                 <Button handleClick={handleClick}>See attack details</Button>
+              </dd>
+            </div>
+            <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt className="text-sm/6 font-medium text-gray-900">Actions</dt>
+              <dd className="mt-1 text-sm/6 text-gray-700 sm:col-span-2 sm:mt-0">
+                <Button handleClick={handleGetPokemon}>Get this Pokemon</Button>
               </dd>
             </div>
           </dl>

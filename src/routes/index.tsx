@@ -16,10 +16,6 @@ export const rawRoutes = [
       {
         path: '/pokemon/:id',
         element: <PokemonPage />,
-      },
-      {
-        path: '/whoami',
-        element: <WhoamiPage />
       }
     ],
   },

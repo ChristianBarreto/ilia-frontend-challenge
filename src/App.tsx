@@ -1,12 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { RouterProvider } from 'react-router-dom';
 import { routes } from './routes';
+import { PokeballProvider } from './context/PokeballContext';
 
 function App() {
   return (
-    <RouterProvider router={routes}/>
+    <PokeballProvider>
+      <RouterProvider router={routes} />
+    </PokeballProvider>
   );
 }
 

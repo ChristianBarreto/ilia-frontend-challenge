@@ -4,6 +4,7 @@ import { classNames } from '../../../helpers';
 import image from './i.png'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import PokeballMenu from '../../cells/PokeballMenu';
 const user = {
   name: 'Christian Barreto',
   email: 'christiannabasbarreto@gmail.com',
@@ -18,6 +19,7 @@ type Nav = {
 }
 
 const userNavigation = [
+  { name: 'Christian Barreto', href: 'https://www.linkedin.com/in/christiannabasbarreto/' },
   { name: 'My Linkedin profile', href: 'https://www.linkedin.com/in/christiannabasbarreto/' },
 ]
 
@@ -25,7 +27,6 @@ export default function Example() {
   const navigate = useNavigate();
   const [navigation, setNavigation] = useState<Nav[]>([
     { id: 0, name: 'Get Pokemons', href: '', current: true },
-    { id: 1, name: 'whoami', href: '/whoami', current: false },
   ])
 
   const handleChangePage = (nav: Nav) => {
@@ -63,7 +64,9 @@ export default function Example() {
                         {item.name}
                       </span>
                     ))}
+                    <PokeballMenu />
                   </div>
+                  
                 </div>
               </div>
               <div className="hidden md:block">
@@ -124,6 +127,9 @@ export default function Example() {
                   {item.name}
                 </DisclosureButton>
               ))}
+              <div className='flex justify-center'>
+                <PokeballMenu />
+              </div>
             </div>
             <div className="border-t border-gray-700 pb-3 pt-4">
               <div className="flex items-center px-5">
