@@ -4,6 +4,7 @@ import { PokemonFetch } from "../../api/pokemons/types";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import Carousel from "../molecules/Carousel";
+import Grid from "../molecules/Grid";
 
 type FetchPokemonsParams = {
   q: string,
@@ -68,6 +69,7 @@ export default function MainPage() {
       {pokemons?.data.length? (
         <div>
           <Carousel pokeData={pokemons.data} />
+          <Grid pokeData={pokemons.data} />
           <hr className="mt-8"/>
           <div className="flex justify-end">
             <p className="text-slate-400">Page {currentPage} out of {totalPages}</p>

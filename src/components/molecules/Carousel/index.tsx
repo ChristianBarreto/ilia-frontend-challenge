@@ -20,7 +20,7 @@ export default function Carousel({
   }
 
   return (
-      <div className="w-full" data-carousel="static">
+      <div className="w-full md:hidden" data-carousel="static">
         <div className="">
           {pokeData.map((pokemon, index) => (
             // Note: I was forced to put index as key because the API returns multiple itens with same ID when we search by name.
