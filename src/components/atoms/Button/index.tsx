@@ -1,5 +1,4 @@
-import { truncate } from "fs"
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
 export default function Button({
   children,

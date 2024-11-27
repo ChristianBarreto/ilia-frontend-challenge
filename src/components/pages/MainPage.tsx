@@ -68,7 +68,7 @@ export default function MainPage() {
       {pokemons?.data.length? (
         <div>
           <Carousel pokeData={pokemons.data} />
-          <hr />
+          <hr className="mt-8"/>
           <div className="flex justify-end">
             <p className="text-slate-400">Page {currentPage} out of {totalPages}</p>
           </div>
