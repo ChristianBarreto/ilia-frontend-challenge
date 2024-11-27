@@ -1,3 +1,11 @@
+export type Attack = {
+  cost: string[],
+  name: string,
+  text: string,
+  damage: string,
+  convertedEnergyCost: number,
+}
+
 export type Pokemon = {
   id: string,
   name: string,
@@ -5,7 +13,16 @@ export type Pokemon = {
     small: string,
     large: string,
   },
-  supertype: string
+  supertype: string,
+  weaknesses: Array<{
+    type: string,
+    value: string,
+  }>,
+  resistances: Array<{
+    type: string,
+    value: string,
+  }>,
+  attacks: Attack[],
 }
 
 export type PokemonFetch = {
