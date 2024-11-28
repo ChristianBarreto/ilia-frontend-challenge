@@ -1,8 +1,10 @@
+@use '../../../styles/colors' as c;
+
 .container {
   padding: 7px;
   border-radius: 4px;
-  color: white;
-  background-color: #dc2626;
+  color: c.$white; // NOTE: I added here some examples of usage of SASS variables.
+  background-color: c.$red;
 }
 
 .btnLike {
@@ -12,24 +14,27 @@
 .pokeball {
   position: absolute;
   margin-top: 10px;
-  border: 1px solid gray;
+  border: 1px solid c.$gray;
   border-radius: 20px 20px 20px 20px;
 }
 
 .pokeballContent {
-  background-color: white;
+  background-color: c.$white;
   padding: 10px;
 }
 
-.pokeballTop {
-  background-color:#dc2626;
+@mixin topBotton { // NOTE: I included here an example of usage of SASS mixins.
+  background-color:c.$red;
   height: 20px;
+}
+
+.pokeballTop {
+  @include topBotton;
   border-radius: 20px 20px 0px 0px;
 }
 
 .pokeballBotton {
-  background-color:#dc2626;
-  height: 20px;
+  @include topBotton;
   border-radius: 0px 0px 20px 20px;
 }
 
@@ -37,5 +42,5 @@
   padding: 0px 4px 1px 4px;
   margin-left: 4px;
   border-radius: 10px;
-  background-color: #f87171;
+  background-color: c.$rose;
 }

@@ -2,7 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { classNames } from '../../../helpers';
 import image from './i.png'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import PokeballMenu from '../../cells/PokeballMenu';
 import { Trans, useTranslation } from "react-i18next";
@@ -64,13 +64,14 @@ export default function Example() {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="shrink-0">
-                  <p
+                  <Link
                     className='text-white text-2xl'
                     onClick={() => navigate('/')}
                     data-cy="ilia-title"
+                    to="/"
                   >
                     Ília get Pokémons
-                  </p>
+                  </Link>
                 </div>
                 <div className="hidden md:block">
                   <div className="flex items-baseline gap-4 ml-6">
@@ -141,7 +142,12 @@ export default function Example() {
                   {item.name}
                 </DisclosureButton>
               ))}
-              <div className='flex justify-center'>
+
+              <div className='flex justify-center gap-2'>
+              <p className='text-white shrink-0 pt-2'>
+                <Trans t={t}>{"goGet"}</Trans>
+              </p>
+                <Button handleClick={handleChangeLang}>{lang}</Button>
                 <PokeballMenu />
               </div>
             </div>
