@@ -3,8 +3,8 @@ import { getPokemons } from "../../api/pokemons";
 import { PokemonFetch } from "../../api/pokemons/types";
 import Input from "../atoms/Input";
 import Button from "../atoms/Button";
-import Carousel from "../molecules/Carousel";
-import Grid from "../molecules/Grid";
+import Carousel from "../organisms/Carousel";
+import Grid from "../organisms/Grid";
 
 type FetchPokemonsParams = {
   q: string,
