@@ -5,24 +5,33 @@ This project was made to comply with the Ília front end test.
 
 `$ git clone git@github.com:ChristianBarreto/ilia-frontend-challenge.git`
 
-## 2. How to run this project
+## 2. Install dependencies
+This project runs on local environment. For that you can use the following script:
+
+`$ yarn install`
+
+## 3. How to run this project
 This project runs on local environment. For that you can use the following script:
 
 `$ yarn start`
 
-## 3. How to run tests
+## 4. How to run tests
 This project supports automated unit tests with Jest, and Cypress for End to End tests.
 
-### 3.1 To run unit tests, use the following script:
+### 4.1 To run unit tests, use the following script:
 
 `$ yarn test` and press `q` to exit
 
-### 3.2 To run E2E tests, use the following script:
+### 4.2 To run E2E tests, use the following script:
 
-`$ ...`
+`$ yarn cypress:test`
 
-## 4. Project strategy
+## 5. Project strategy
 I'm delivering all requirements mentioned on the test Repo and email. As part of my strategy I decided to focus on the main functionalities and delivery a sample of usage of the side requirements.
+
+To fetch the Pokemon TGC REST API I used pure Axios and useEffect to call the api once this is a simple project, but in more complex projects we can use OpenAPI to create the Axios request from yml files, and also use React Query to easilly access the database state and apply caching.
+
+NOTE: Not all cards have all data required to be shown on details page (e.g ID: xy4-117 has no resistance, weaknesses, etc)
 
 While installing i18-next for internationalization I faced issues with TypeScript version of the dependencies not having available time to properlly fix it, so I was forced to use Yarn as package managment, so NPM may not work.
 
@@ -30,12 +39,12 @@ Once TailwindCSS is a important requirement for this position I decided to imple
 
 If you search for the word "NOTE", you will find few comments that I did to explain why made some decisions.
 
-## 5. Design patterns
+## 6. Design patterns
 I applied the Atomic design pattern to define the directory structure as far as this pattern matches with the atomicity React concept.
 
 I also applied wildly the immutability concept to handle React states and context.
 
-## 6. My contact
+## 7. My contact
 Please, feel free to discuss with me all the details about this project and why I took determined decisions.
 
 **Christian Barreto**
