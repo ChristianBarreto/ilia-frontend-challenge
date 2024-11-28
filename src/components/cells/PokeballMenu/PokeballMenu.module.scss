@@ -1,0 +1,41 @@
+.container {
+  padding: 7px;
+  border-radius: 4px;
+  color: white;
+  background-color: #dc2626;
+}
+
+.btnLike {
+  cursor: pointer;
+}
+
+.pokeball {
+  position: absolute;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.pokeballContent {
+  background-color: white;
+  padding: 10px;
+}
+
+.pokeballTop {
+  background-color:#dc2626;
+  height: 20px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.pokeballBotton {
+  background-color:#dc2626;
+  height: 20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.badge {
+  padding: 0px 4px 1px 4px;
+  margin-left: 4px;
+  border-radius: 10px;
+  background-color: #f87171;
+}

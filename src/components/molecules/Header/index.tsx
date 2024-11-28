@@ -73,20 +73,10 @@ export default function Example() {
                   </p>
                 </div>
                 <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    {navigation.map((item) => (
-                      <span
-                        key={item.name}
-                        onClick={() => handleChangePage(item)}
-                        aria-current={item.current ? 'page' : undefined}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium',
-                        )}
-                      >
-                        <Trans t={t}>{"goGet"}</Trans>
-                      </span>
-                    ))}
+                  <div className="flex items-baseline gap-4 ml-6">
+                    <p className='text-white shrink-0'>
+                      <Trans t={t}>{"goGet"}</Trans>
+                    </p>
                     <Button handleClick={handleChangeLang}>{lang}</Button>
                     <PokeballMenu />
                   </div>

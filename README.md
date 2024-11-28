@@ -26,6 +26,8 @@ I'm delivering all requirements mentioned on the test Repo and email. As part of
 
 While installing i18-next for internationalization I faced issues with TypeScript version of the dependencies not having available time to properlly fix it, so I was forced to use Yarn as package managment, so NPM may not work.
 
+Once TailwindCSS is a important requirement for this position I decided to implement this project using it. I also installed SASS and add to one component `<PokeballMenu />` as an example of usage.
+
 If you search for the word "NOTE", you will find few comments that I did to explain why made some decisions.
 
 ## 5. Design patterns
