@@ -22,9 +22,8 @@ export default function Grid({
   return (
       <div className="w-full hidden md:block" data-carousel="static">
         <div className="grid grid-cols-5 gap-4">
-          {pokeData.map((pokemon, index) => (
-            // Note: I was forced to put index as key because the API returns multiple itens with same ID when we search by name.
-            <div key={index} className="border p-2 rounded-lg shadow-md">
+          {pokeData.map((pokemon) => (
+            <div key={pokemon.id} className="border p-2 rounded-lg shadow-md">
               <div>
                 <img src={pokemon.images.small} className="w-full h-full" alt={pokemon.name} />
               </div>

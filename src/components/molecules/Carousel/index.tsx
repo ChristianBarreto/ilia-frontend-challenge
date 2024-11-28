@@ -23,8 +23,7 @@ export default function Carousel({
       <div className="w-full md:hidden" data-carousel="static">
         <div className="">
           {pokeData.map((pokemon, index) => (
-            // Note: I was forced to put index as key because the API returns multiple itens with same ID when we search by name.
-            <div key={index} className={`${slideIndex !== index && "hidden" }`}>
+            <div key={pokemon.id} className={`${slideIndex !== index && "hidden" }`}>
               <div>
                 <img src={pokemon.images.small} className="w-full h-full" alt={pokemon.name} />
               </div>
