@@ -26,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:dev": "cypress open",
+    "cypress:test": "cypress run --browser chrome"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +54,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@testing-library/dom": "^10.4.0",
     "babel-jest": "^29.7.0",
+    "cypress": "^13.16.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "react-test-renderer": "^18.3.1",

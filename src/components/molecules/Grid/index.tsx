@@ -23,21 +23,18 @@ export default function Grid({
       <div className="w-full hidden md:block" data-carousel="static">
         <div className="grid grid-cols-5 gap-4">
           {pokeData.map((pokemon) => (
-            <div key={pokemon.id} className="border p-2 rounded-lg shadow-md">
+            <div key={pokemon.id} className="border p-2 rounded-lg shadow-md" data-cy="pokemon-card">
               <div>
                 <img src={pokemon.images.small} className="w-full h-full" alt={pokemon.name} />
               </div>
-              <p className="text-sm"><span className="font-bold">Name:</span> {pokemon.name}</p>
-              <p className="text-sm"><span className="font-bold">ID:</span> {pokemon.id}</p>
-              <p className="text-sm"><span className="font-bold">Name:</span> {pokemon.supertype}</p>
+              <p className="text-sm"><span className="font-bold" data-cy="card-name">Name:</span> {pokemon.name}</p>
+              <p className="text-sm"><span className="font-bold" data-cy="card-id">ID:</span> {pokemon.id}</p>
+              <p className="text-sm"><span className="font-bold" data-cy="card-type">Type:</span> {pokemon.supertype}</p>
               <div className="flex justify-end mt-4">
-                <Button handleClick={() => handleOpenDetails(pokemon.id)}>Ver detalhes</Button>
+                <Button handleClick={() => handleOpenDetails(pokemon.id)} id="card-button">Ver detalhes</Button>
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex justify-center">
-          <p className="text-indigo-500">{slideIndex+1}/{pokeData.length} cards</p>
         </div>
     </div>
   )

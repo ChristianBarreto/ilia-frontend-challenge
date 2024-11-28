@@ -64,7 +64,13 @@ export default function Example() {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="shrink-0">
-                  <p className='text-white text-2xl' onClick={() => navigate('/')}>Ília get Pokémons</p>
+                  <p
+                    className='text-white text-2xl'
+                    onClick={() => navigate('/')}
+                    data-cy="ilia-title"
+                  >
+                    Ília get Pokémons
+                  </p>
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
