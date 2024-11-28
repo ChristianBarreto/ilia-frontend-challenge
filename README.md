@@ -6,7 +6,6 @@ This project was made to comply with the Ília front end test.
 `$ git clone git@github.com:ChristianBarreto/ilia-frontend-challenge.git`
 
 ## 2. Install dependencies
-This project runs on local environment. For that you can use the following script:
 
 `$ yarn install`
 
@@ -23,8 +22,10 @@ This project supports automated unit tests with Jest, and Cypress for End to End
 `$ yarn test` and press `q` to exit
 
 ### 4.2 To run E2E tests, use the following script:
+To run the Cypress headless use:
 
 `$ yarn cypress:test`
+(make sure you are running the project on your local environment)
 
 ## 5. Project strategy
 I'm delivering all requirements mentioned on the test Repo and email. As part of my strategy I decided to focus on the main functionalities and delivery a sample of usage of the side requirements.
