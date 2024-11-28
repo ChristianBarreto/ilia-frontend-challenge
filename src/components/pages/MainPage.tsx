@@ -9,8 +9,7 @@ import Grid from "../molecules/Grid";
 type FetchPokemonsParams = {
   q: string,
   page: number,
-}
-
+};
 
 export default function MainPage() {
   const [pageNum, setPageNum] = useState(1);
@@ -84,5 +83,5 @@ export default function MainPage() {
         )
       }
     </div>
-  )
-}
+  );
+};
