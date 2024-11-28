@@ -8,6 +8,7 @@ This project was made to comply with the Ília front end test.
 ## 2. Install dependencies
 
 `$ yarn install`
+(make sure you are use yarn, see item 5.d.)
 
 ## 3. How to run this project
 This project runs on local environment. For that you can use the following script:
