@@ -5,6 +5,10 @@ import image from './i.png'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import PokeballMenu from '../../cells/PokeballMenu';
+import { Trans, useTranslation } from "react-i18next";
+import Button from '../../atoms/Button';
+
+
 const user = {
   name: 'Christian Barreto',
   email: 'christiannabasbarreto@gmail.com',
@@ -25,9 +29,12 @@ const userNavigation = [
 
 export default function Example() {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState('JA');
+
   const [navigation, setNavigation] = useState<Nav[]>([
     { id: 0, name: 'Get Pokemons', href: '', current: true },
-  ])
+  ]);
 
   const handleChangePage = (nav: Nav) => {
     navigate(nav.href);
@@ -38,6 +45,16 @@ export default function Example() {
       return {...n, current: false}
     }));
   } // Note: I used immutability here as a good practice handling React state.
+
+  const handleChangeLang = () => {
+    if (lang === 'EN') {
+      i18n.changeLanguage('ja');
+      setLang("JA")
+    } else if (lang === 'JA') {
+      i18n.changeLanguage('en');
+      setLang("EN")
+    }
+  }
 
   return (
     <>
@@ -61,9 +78,10 @@ export default function Example() {
                           'rounded-md px-3 py-2 text-sm font-medium',
                         )}
                       >
-                        {item.name}
+                        <Trans t={t}>{"goGet"}</Trans>
                       </span>
                     ))}
+                    <Button handleClick={handleChangeLang}>{lang}</Button>
                     <PokeballMenu />
                   </div>
                   
